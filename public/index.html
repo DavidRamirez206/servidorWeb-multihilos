@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello, World</title>
+        <style>
+            body{
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(270deg, #6a11cb, #2575fc);
+                background-size: 400% 400%;
+                animation: fondo 10s ease infinite;
+                font-family: 'Segoe UI', sans-serif;
+            }
+
+            h1 {
+                font-size: 4rem;
+                color: white;
+                animation: aparecer 2s ease-out, flotar 3s ease-in-out infinite;
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+
+            .tierra{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg");
+                background-size: cover;
+                box-shadow: inset -20px 0 40px rgba(0, 0, 0, 0.6),
+                            0 0 30px rgba(0, 150, 255, 0.6);
+                animation: girar 12s linear infinite;
+            }
+
+            @keyframes girar {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes aparecer {
+                from {
+                    opacity: 0;
+                    transform: scale(0.5);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes flotar {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+            }
+
+            @keyframes fondo {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="tierra"></div>
+        <h1>Hello, World</h1>
+    </body>
+
+</html>

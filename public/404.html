@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Página no encontrada</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, #0b1d3a, #000);
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            animation: aparecer 1.5s ease-out;
+        }
+
+        .texto {
+            text-align: center;
+        }
+
+        .texto h1 {
+            font-size: 6rem;
+            margin: 0;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(0, 180, 255, 0.8);
+        }
+
+        .texto p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .tierra {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg");
+            background-size: cover;
+            box-shadow:
+                    inset -25px 0 50px rgba(0, 0, 0, 0.7),
+                    0 0 40px rgba(0, 150, 255, 0.7);
+            animation: girar 14s linear infinite, flotar 4s ease-in-out infinite;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes flotar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor">
+    <div class="texto">
+        <h1>404</h1>
+        <p>Parece que te perdiste en el espacio</p>
+    </div>
+    <div class="tierra"></div>
+</div>
+</body>
+</html>
